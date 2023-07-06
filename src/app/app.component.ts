@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToDo } from './models/todo.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  arrToDos: ToDo[];
+
+  constructor() {
+    this.arrToDos = [];
+  }
+
+  onToDoCreated($event: any) {
+
+    this.arrToDos.push($event);
+  }
 }
