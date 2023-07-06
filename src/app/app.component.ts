@@ -15,7 +15,6 @@ export class AppComponent {
   }
 
   onToDoCreated($event: any) {
-
     this.arrToDos.push($event);
   }
 }
