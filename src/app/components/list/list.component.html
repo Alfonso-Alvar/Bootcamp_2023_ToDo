@@ -1,7 +1,7 @@
 <div class="list">
-    <div class="todo">
-        <h3>TITLE</h3>
-        <p>Description</p>
-        <button>COMPLETE/INCOMPLETE</button>
+    <div class="todo" *ngFor="let todo of todos" [ngClass]="{completed: todo.completed, incompleted: !todo.completed}">
+        <h3>{{todo.title}}</h3>
+        <p>{{todo.description}}</p>
+        <button (click)="onClick(todo)">{{todo.completed ? 'Incompleted' : 'Completed'}}</button>
     </div>
 </div>

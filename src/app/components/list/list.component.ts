@@ -17,4 +17,8 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
 
   }
+
+  onClick(pToDo: ToDo) {
+    pToDo.completed = !pToDo.completed
+  }
 }
