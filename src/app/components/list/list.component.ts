@@ -21,4 +21,8 @@ export class ListComponent implements OnInit {
   onClick(pToDo: ToDo) {
     pToDo.completed = !pToDo.completed
   }
+
+  onClickDelete(index: any) {
+    this.todos.splice(index, 1);
+  }
 }
